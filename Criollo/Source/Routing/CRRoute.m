@@ -141,9 +141,7 @@
     if ([object isKindOfClass:[CRRoute class]]) {
         CRRoute *route = (CRRoute *)object;
         
-        return _method == route.method &&
-            [_path isEqualToString:route.path] &&
-            _recursive == route.recursive ;
+        return [_path isEqualToString:route.path];
     } else {
         return false;
     }
